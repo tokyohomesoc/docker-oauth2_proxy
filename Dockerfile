@@ -4,8 +4,6 @@ MAINTAINER HomeSOC Tokyo <github@homesoc.tokyo>
 
 ARG OAUTH2_PROXY_VERSION=2.1.linux-amd64.go1.6
 
-RUN apk --update add curl
-
 RUN \
        apk add --no-cache --virtual .build-deps \
             bash \
@@ -17,5 +15,7 @@ RUN \
     && chmod +x /bin/oauth2_proxy \
     && rm -r oauth2_proxy* \
     && apk del .build-deps
+
+EXPOSE 4180
 
 ENTRYPOINT ["oauth2_proxy"]
