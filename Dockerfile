@@ -19,3 +19,4 @@ RUN \
 EXPOSE 4180
 
 ENTRYPOINT ["oauth2_proxy"]
+CMD ["oauth2_proxy"]
