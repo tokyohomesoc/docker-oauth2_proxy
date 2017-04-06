@@ -10,7 +10,7 @@ RUN \
        apk add --no-cache --virtual .build-deps \
             bash \
             curl \
-    && curl -fSL https://github.com/bitly/oauth2_proxy/releases/download/v2.0.1/oauth2_proxy-$OAUTH2_PROXY_VERSION.tar.gz \
+    && curl -fSL https://github.com/bitly/oauth2_proxy/releases/download/v2.1/oauth2_proxy-${OAUTH2_PROXY_VERSION}.tar.gz \
         -o oauth2_proxy.tar.gz \
     && tar xzvf oauth2_proxy.tar.gz \
     && mv oauth2_proxy-$OAUTH2_PROXY_VERSION/oauth2_proxy /bin/ \
