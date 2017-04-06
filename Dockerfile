@@ -2,7 +2,7 @@ FROM alpine:latest
 
 MAINTAINER HomeSOC Tokyo <github@homesoc.tokyo>
 
-ARG OAUTH2_PROXY_VERSION 2.1.linux-amd64.go1.6
+ARG OAUTH2_PROXY_VERSION=2.1.linux-amd64.go1.6
 
 RUN apk --update add curl
 
